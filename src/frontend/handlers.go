@@ -214,7 +214,7 @@ func (fe* frontendServer) addCommentToProductHandler( w http.ResponseWriter, r *
 		return
 	}
 
-	w.Header().Set("location", "/cart")
+	w.Header().Set("location", "/product/"+p.GetId())
 	w.WriteHeader(http.StatusFound)
 }
 
